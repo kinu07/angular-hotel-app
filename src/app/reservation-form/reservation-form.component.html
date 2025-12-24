@@ -1,4 +1,4 @@
-<form [formGroup]="reservationForm" (ngSubmit)="onSubmit">
+<form [formGroup]="reservationForm" (ngSubmit)="onSubmit()">
     <div>
         <label>Check-in Date</label>
         <input type="date" formControlName="checkInDate">
