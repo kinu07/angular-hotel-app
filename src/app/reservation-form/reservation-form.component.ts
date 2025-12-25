@@ -47,13 +47,12 @@ export class ReservationFormComponent implements OnInit {
     
     if(id){
       //update
-      this.reservationService.updateReservation(id,reservation)
-    }else{
+      reservation.id = id; // preserve id when updating
+      this.reservationService.updateReservation(id, reservation);
+    } else {
       //add
-      this.reservationService.addReservation(reservation)
-
-    }
       this.reservationService.addReservation(reservation);
+    }
       this.router.navigate(['/list']);
     }
   }
